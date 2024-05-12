@@ -22,25 +22,43 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.ListView1 = New System.Windows.Forms.ListView()
+        Me.Close = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.save = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.HallName = New System.Windows.Forms.TextBox()
+        Me.HallMngr = New System.Windows.Forms.TextBox()
         Me.Address = New System.Windows.Forms.TextBox()
         Me.TelNo = New System.Windows.Forms.TextBox()
-        Me.HallMngr = New System.Windows.Forms.TextBox()
         Me.Delete = New System.Windows.Forms.Button()
         Me.Edit = New System.Windows.Forms.Button()
-        Me.Cancel = New System.Windows.Forms.Button()
-        Me.save = New System.Windows.Forms.Button()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Close = New System.Windows.Forms.Button()
-        Me.Newbtn = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.ListView1 = New System.Windows.Forms.ListView()
+        Me.Cancel = New System.Windows.Forms.Button()
+        Me.Newbtn = New System.Windows.Forms.Button()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'ListView1
+        '
+        Me.ListView1.HideSelection = False
+        Me.ListView1.Location = New System.Drawing.Point(41, 341)
+        Me.ListView1.Name = "ListView1"
+        Me.ListView1.Size = New System.Drawing.Size(506, 197)
+        Me.ListView1.TabIndex = 19
+        Me.ListView1.UseCompatibleStateImageBehavior = False
+        '
+        'Close
+        '
+        Me.Close.Location = New System.Drawing.Point(331, 190)
+        Me.Close.Name = "Close"
+        Me.Close.Size = New System.Drawing.Size(116, 40)
+        Me.Close.TabIndex = 13
+        Me.Close.Text = "Close"
+        Me.Close.UseVisualStyleBackColor = True
         '
         'Label1
         '
@@ -51,6 +69,15 @@ Partial Class Form1
         Me.Label1.Size = New System.Drawing.Size(86, 17)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Hall Name "
+        '
+        'save
+        '
+        Me.save.Location = New System.Drawing.Point(331, 92)
+        Me.save.Name = "save"
+        Me.save.Size = New System.Drawing.Size(116, 40)
+        Me.save.TabIndex = 12
+        Me.save.Text = "Save"
+        Me.save.UseVisualStyleBackColor = True
         '
         'Label2
         '
@@ -90,6 +117,14 @@ Partial Class Form1
         Me.HallName.Size = New System.Drawing.Size(177, 26)
         Me.HallName.TabIndex = 5
         '
+        'HallMngr
+        '
+        Me.HallMngr.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.HallMngr.Location = New System.Drawing.Point(134, 192)
+        Me.HallMngr.Name = "HallMngr"
+        Me.HallMngr.Size = New System.Drawing.Size(177, 26)
+        Me.HallMngr.TabIndex = 8
+        '
         'Address
         '
         Me.Address.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -106,17 +141,9 @@ Partial Class Form1
         Me.TelNo.Size = New System.Drawing.Size(177, 26)
         Me.TelNo.TabIndex = 7
         '
-        'HallMngr
-        '
-        Me.HallMngr.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.HallMngr.Location = New System.Drawing.Point(134, 192)
-        Me.HallMngr.Name = "HallMngr"
-        Me.HallMngr.Size = New System.Drawing.Size(177, 26)
-        Me.HallMngr.TabIndex = 8
-        '
         'Delete
         '
-        Me.Delete.Location = New System.Drawing.Point(331, 144)
+        Me.Delete.Location = New System.Drawing.Point(331, 140)
         Me.Delete.Name = "Delete"
         Me.Delete.Size = New System.Drawing.Size(116, 40)
         Me.Delete.TabIndex = 9
@@ -132,6 +159,16 @@ Partial Class Form1
         Me.Edit.Text = "Edit"
         Me.Edit.UseVisualStyleBackColor = True
         '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(251, 303)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(101, 22)
+        Me.Label5.TabIndex = 18
+        Me.Label5.Text = "Hall Table"
+        '
         'Cancel
         '
         Me.Cancel.Location = New System.Drawing.Point(331, 190)
@@ -141,14 +178,14 @@ Partial Class Form1
         Me.Cancel.Text = "Cancel"
         Me.Cancel.UseVisualStyleBackColor = True
         '
-        'save
+        'Newbtn
         '
-        Me.save.Location = New System.Drawing.Point(331, 93)
-        Me.save.Name = "save"
-        Me.save.Size = New System.Drawing.Size(116, 40)
-        Me.save.TabIndex = 12
-        Me.save.Text = "Save"
-        Me.save.UseVisualStyleBackColor = True
+        Me.Newbtn.Location = New System.Drawing.Point(331, 46)
+        Me.Newbtn.Name = "Newbtn"
+        Me.Newbtn.Size = New System.Drawing.Size(116, 40)
+        Me.Newbtn.TabIndex = 14
+        Me.Newbtn.Text = "New"
+        Me.Newbtn.UseVisualStyleBackColor = True
         '
         'Panel1
         '
@@ -168,59 +205,23 @@ Partial Class Form1
         Me.Panel1.Controls.Add(Me.Cancel)
         Me.Panel1.Controls.Add(Me.Newbtn)
         Me.Panel1.Controls.Add(Me.Edit)
-        Me.Panel1.Location = New System.Drawing.Point(27, 24)
+        Me.Panel1.Location = New System.Drawing.Point(41, 19)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(506, 265)
-        Me.Panel1.TabIndex = 13
-        '
-        'Close
-        '
-        Me.Close.Location = New System.Drawing.Point(331, 190)
-        Me.Close.Name = "Close"
-        Me.Close.Size = New System.Drawing.Size(116, 40)
-        Me.Close.TabIndex = 13
-        Me.Close.Text = "Close"
-        Me.Close.UseVisualStyleBackColor = True
-        '
-        'Newbtn
-        '
-        Me.Newbtn.Location = New System.Drawing.Point(331, 46)
-        Me.Newbtn.Name = "Newbtn"
-        Me.Newbtn.Size = New System.Drawing.Size(116, 40)
-        Me.Newbtn.TabIndex = 14
-        Me.Newbtn.Text = "New"
-        Me.Newbtn.UseVisualStyleBackColor = True
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(237, 308)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(101, 22)
-        Me.Label5.TabIndex = 15
-        Me.Label5.Text = "Hall Table"
-        '
-        'ListView1
-        '
-        Me.ListView1.HideSelection = False
-        Me.ListView1.Location = New System.Drawing.Point(27, 346)
-        Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(506, 197)
-        Me.ListView1.TabIndex = 16
-        Me.ListView1.UseCompatibleStateImageBehavior = False
+        Me.Panel1.TabIndex = 17
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.ButtonShadow
-        Me.ClientSize = New System.Drawing.Size(565, 588)
+        Me.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.ClientSize = New System.Drawing.Size(590, 550)
         Me.Controls.Add(Me.ListView1)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Panel1)
+        Me.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Name = "Form1"
-        Me.Text = "Data Base"
+        Me.Text = "MySQL"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
@@ -228,21 +229,21 @@ Partial Class Form1
 
     End Sub
 
+    Friend WithEvents ListView1 As ListView
+    Friend WithEvents Close As Button
     Friend WithEvents Label1 As Label
+    Friend WithEvents save As Button
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents HallName As TextBox
+    Friend WithEvents HallMngr As TextBox
     Friend WithEvents Address As TextBox
     Friend WithEvents TelNo As TextBox
-    Friend WithEvents HallMngr As TextBox
     Friend WithEvents Delete As Button
     Friend WithEvents Edit As Button
-    Friend WithEvents Cancel As Button
-    Friend WithEvents save As Button
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents Close As Button
     Friend WithEvents Label5 As Label
+    Friend WithEvents Cancel As Button
     Friend WithEvents Newbtn As Button
-    Friend WithEvents ListView1 As ListView
+    Friend WithEvents Panel1 As Panel
 End Class

@@ -29,6 +29,7 @@ Public Class Form1
             lv.SubItems.Add(dr("hallman"))
             ListView1.Items.Add(lv)
         Loop
+
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
